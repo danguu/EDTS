@@ -1,0 +1,15 @@
+== Expresión ==
+y + 2*2
+
+== AST decorado ==
+└── BinOp(+)  ⟨val=6.0⟩
+    ├── Id(y)  ⟨val=2.0⟩
+    └── BinOp(*)  ⟨val=4.0⟩
+        ├── Num(2)  ⟨val=2.0⟩
+        └── Num(2)  ⟨val=2.0⟩
+
+== Tabla de símbolos ==
+y          tipo=num valor=2.0
+
+== Valor ==
+6.0

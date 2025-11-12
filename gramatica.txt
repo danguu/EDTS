@@ -1,0 +1,7 @@
+# Gramática LL(1) para + - * / con paréntesis, ID y NUM
+# Formato: A -> rhs1 | rhs2 | ...   ;  ε representa vacía
+E  -> T E'
+E' -> PLUS T E' | MINUS T E' | ε
+T  -> F T'
+T' -> TIMES F T' | DIV F T' | ε
+F  -> LPAREN E RPAREN | ID | NUM
