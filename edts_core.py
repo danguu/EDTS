@@ -4,9 +4,7 @@ import re
 import sys  # noqa: F401
 from pathlib import Path
 
-# -----------------------------
 # Gramática desde archivo
-# -----------------------------
 
 EPS = "ε"
 
@@ -33,10 +31,7 @@ def load_grammar(path: str) -> Dict[str, List[List[str]]]:
         raise ValueError("Gramática vacía o inválida.")
     return G
 
-
-# -----------------------------
 # Léxico
-# -----------------------------
 
 Token = Tuple[str, str]  # (type, lexeme)
 
@@ -67,9 +62,7 @@ def lex(s: str) -> List[Token]:
     return out
 
 
-# -----------------------------
 # FIRST, FOLLOW, PREDICT
-# -----------------------------
 
 
 def first_of_string(
@@ -185,9 +178,7 @@ def sets_report(
     return "\n".join(lines)
 
 
-# -----------------------------
 # AST y símbolos
-# -----------------------------
 
 from dataclasses import dataclass, field  # noqa: E402, F811
 from typing import List, Optional  # noqa: E402, F811
@@ -233,9 +224,7 @@ class SymbolTable:
         return "\n".join(lines)
 
 
-# -----------------------------
 # Parser predictivo (fijo para la gramática de expresiones)
-# -----------------------------
 
 
 class Parser:
@@ -327,9 +316,7 @@ class Parser:
         return ast
 
 
-# -----------------------------
 # Utilidades de I/O
-# -----------------------------
 
 
 def read_env_file(path: Optional[str]) -> Dict[str, float]:
