@@ -100,6 +100,3 @@ y          tipo=num valor=2.0
 == Valor ==
 6.0
 ```
-
-
-¿Quieres que el README también incluya una **sección teórica** (definición de ETDS y diferencia con gramáticas de atributos)? Puedo añadirla.
